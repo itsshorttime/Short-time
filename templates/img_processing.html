@@ -3,33 +3,65 @@
 {% block content %}
     <div class="card">
         <div class="card-header">
-            <h4> 디지털영상처리 - Upload Image </h4>
+            <h4> Upload Video </h4>
         </div>
         <div class="card-body">
             <form id="upload-file"  action="/img_result" method="POST" enctype="multipart/form-data">
                 <h5 class="card-title">Browse Image</h5>
-                <p class="card-text"><input type="file" id="file" name="file" ></p>
+                <div class="d-flex align-items-center">
+                  <p class="card-text mb-0"><input type="file" id="file" name="file"></p>
+                  <button type="button" class="btn btn-info">영상 분석</button>
+                </div>
+                <h5 class="card-title">Choose A Person</h5>
                 <p>
-                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Choose Processing Style</label>
-                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" name="style">
-                        <option value="Embossing">Embossing</option>
-                        <option value="Cartoon">Cartoon</option>
-                        <option value="PencilGray">Pencil Sketch</option>
-                        <option value="PencilColor">Pencil Color</option>
-                        <option value="OilPainting">Oil Painting</option>
-                        <option value="DetailEnhance">Detail Enhance</option>
-                    </select>
+                    <div class="row">
+                        <div class="col">
+                            <img src="{{ url_for('static', filename='test.png')}}" alt="Person 1" width="150" height="150">
+                        </div>
+                        <div class="col">
+                            <img src="{{ url_for('static', filename='test.png')}}" alt="Person 2" width="150" height="150">
+                        </div>
+                        <div class="col">
+                            <img src="{{ url_for('static', filename='test.png')}}" alt="Person 3" width="150" height="150">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1"> Person1 </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2"> Person2 </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                <label class="form-check-label" for="inlineRadio3"> Person3 </label>
+                            </div>
+                        </div>
+                    </div>
                 </p>
-                <input type="submit" class="btn btn-primary " name="submit" value="Processing">
             </form>
         </div>
+
         <div class="card-footer">
-             <a class="btn btn-outline-success" href="/">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
-                    <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"/>
-                 </svg>
-                 홈화면으로
-             </a>
+             <div class="d-flex justify-content-between">
+                  <a class="btn btn-outline-success" href="/">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                      <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"/>
+                    </svg>
+                    홈화면으로
+                  </a>
+                  <div>
+                    <input type="submit" class="btn btn-primary" name="submit" value="Processing">
+                  </div>
+            </div>
         </div>
+
     </div>
 {% endblock %}
