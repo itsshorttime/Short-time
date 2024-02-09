@@ -81,3 +81,7 @@ label {
 .img {
     position: absolute;
 }
+
+.button-container {
+  text-align: right;
+}
