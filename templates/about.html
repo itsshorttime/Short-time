@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %}
+
+{% block content %}
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
@@ -7,23 +8,6 @@
         <link href="style.css" rel="stylesheet"
         type="text/css" />
         <style>
-            .nav {
-                height: 70px;
-                border-bottom: 1px solid gray;
-                display: flex;
-                align-items: center;
-            }
-
-            .nav-right-items {
-                display: flex;
-                margin-left: 20px;
-                margin-right: auto;
-            }
-
-            .nav-item {
-                margin-left:10px;
-            }
-
             .team-name {
                 margin-left: 30px;
                 font-size: 30px;
@@ -85,16 +69,7 @@
         </style>
     </head>
     <body>
-        <div class="nav">
-            <div class="team-name">
-                Short time!
-            </div>
-            <div class="nav-right-items">
-                <div class="nav-item">메뉴1</div>
-                <div class="nav-item">메뉴1</div>
-            </div>
 
-        </div>
         <div class="main">
             <div class="title">
                 About us!
@@ -198,4 +173,4 @@
         </div>
         <scropt src="scropt.js"></scropt>
     </body>
-</html>
+{% endblock %}
