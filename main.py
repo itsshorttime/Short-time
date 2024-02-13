@@ -48,6 +48,10 @@ def create_app():
             #     return render_template('img_result.html', file_name=file_name, result_file=fname)
         return ''
 
+    @app.route('/about')
+    def about():
+        return render_template('about.html')
+
     @app.route('/img_processing/', methods=['Get'])
     def img_processing():
         return render_template('img_processing.html')
