@@ -240,3 +240,12 @@
   });
 
 })()
+
+document.addEventListener('DOMContentLoaded', function() {
+    var analyzeButton = document.getElementById('analyzeVideoButton');
+    if (analyzeButton) {
+        analyzeButton.addEventListener('click', function() {
+            window.location.href = '/analyze_video';
+        });
+    }
+});

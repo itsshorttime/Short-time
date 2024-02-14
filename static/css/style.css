@@ -1065,3 +1065,7 @@ section {
   }
 }
 
+.download-icon .fas {
+    font-size: 24px; /* 아이콘 크기 조정 */
+    color: #000; /* 아이콘 색상 변경 */
+}
